@@ -1,0 +1,11 @@
+<project default="document">
+    <target name="clean">
+        <delete dir="doc"/>
+    </target>
+    <typedef resource="dokka-antlib.xml" classpath="dokka-fatjar-0.9.19-SNAPSHOT.jar"/>
+    <target name="document">
+        <dokka format="javadoc" outputdir="doc">
+            <passConfig src="src" moduleName="kotlinant"/>
+        </dokka>
+    </target>
+</project>
